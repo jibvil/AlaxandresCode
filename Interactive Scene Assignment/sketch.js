@@ -15,12 +15,27 @@ function setup() {
 
 function draw() {
   background("Green");
-  // Making the fly
-  fill("Black");
-  rect(mouseX, mouseY, 10, 5, 90, 90);
+
   // Background crap
-  
+  noStroke()
+  // Trashcan
   fill("Gray");
-  rect(300, 250, 150, 200,);
+  rect(300, 250, 150, 200);
+  ellipse(375, 450, 150, 70);
+  fill(150, 150, 150);
+  ellipse(375, 250, 150, 70);
+  fill("Gray");
+  rect(390, 236, 6, 18);
+  rect(355, 236, 6, 18);
+  rect(355, 233, 41, 6, 90, 90);
+  //banana peel
+  fill(255, 202, 24);
+  ellipse(220, 450, 35, 30);
+  ellipse(190, 450, 35, 30);
+  fill("green");
+  ellipse(224, 443, 35, 35);
+  ellipse(186, 443, 35, 35);
+  fill(255, 202, 24);
+  triangle()
 
 }
