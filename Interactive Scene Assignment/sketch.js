@@ -28,6 +28,8 @@ function draw() {
   rect(390, 236, 6, 18);
   rect(355, 236, 6, 18);
   rect(355, 233, 41, 6, 90, 90);
+  //garbage bag
+  
   //banana peel
   fill(255, 202, 24);
   ellipse(220, 450, 35, 30);
@@ -36,6 +38,6 @@ function draw() {
   ellipse(224, 443, 35, 35);
   ellipse(186, 443, 35, 35);
   fill(255, 202, 24);
-  triangle()
+  triangle(205, 446, 198, 440, 211, 440)
 
 }
