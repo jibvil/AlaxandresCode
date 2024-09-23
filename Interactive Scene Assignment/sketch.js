@@ -18,6 +18,7 @@ function draw() {
 
   // Background crap
   noStroke()
+
   // Trashcan
   fill("Gray");
   rect(300, 250, 150, 200);
@@ -28,8 +29,13 @@ function draw() {
   rect(390, 236, 6, 18);
   rect(355, 236, 6, 18);
   rect(355, 233, 41, 6, 90, 90);
+
   //garbage bag
-  
+  fill(50, 50, 50)
+  ellipse(100, 380, 120, 170)
+  rect(40, 330, 120, 100)
+  degrees
+
   //banana peel
   fill(255, 202, 24);
   ellipse(220, 450, 35, 30);
