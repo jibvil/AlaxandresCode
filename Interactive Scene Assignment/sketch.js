@@ -18,8 +18,10 @@ function draw() {
 
   // Background crap
   noStroke()
+  fill("Cyan")
+  rect(0, 0, )
 
-  // Trashcan
+  //trash can
   fill("Gray");
   rect(300, 250, 150, 200);
   ellipse(375, 450, 150, 70);
@@ -46,4 +48,9 @@ function draw() {
   fill(255, 202, 24);
   triangle(205, 446, 198, 440, 211, 440)
 
+}
+
+function mouseEvents() {
+  fill("black");
+  ellipse(flyX, flyY, 100, 100);
 }
