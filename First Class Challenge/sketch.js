@@ -1,6 +1,6 @@
-// Project Title
-// Your Name
-// Date
+// Objects Demo 2
+// Alaxandre C.
+// 10/17/2024
 //
 
 
@@ -14,7 +14,7 @@ function setup() {
 function draw() {
   background(0);
   for (let i = 0; i < points.length; i++) {
-    points[i].move();
+   // points[i].move();
     points[i].connectPoints(points);
     points[i].display();
   }
