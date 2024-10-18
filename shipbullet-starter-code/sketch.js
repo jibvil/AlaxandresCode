@@ -57,9 +57,7 @@ class Ship {
       this.y -= 2;
     }
 
-    if(keyIsDown(32)){
-      this.bullets
-    }
+    this.bullets = this.bullets.filter(b => (b.update(), b.isOnScreen()));
   }
 
   display() {
@@ -70,9 +68,8 @@ class Ship {
   }
 
   handleKeyPress() {
-    if(keyIsDown){
-      bullets.push(new Bullet(this.x, this.y, 0, 15, bulletImage));
-      print(this.bullets);
+    if(keyCode === 32){
+      this.bullets.push(new Bullet(this.x, this.y, 0, 15, bulletImage));
     }
   }
 }
@@ -95,15 +92,15 @@ class Bullet {
   }
 
   update() {
-    // what does the bullet need to do during each frame? how do we know if it is off screen?
+    this.y = this.dy;
   }
 
   display(){
-    image(bulletImage, this.x, this.y);
+    image(this.theImage, this.x, this.y);
   }
 
   isOnScreen() {
-    // check if the bullet is still on the screen
+    return this.y > 0;
   }
 }
 
