@@ -13,6 +13,7 @@ function setup() {
 function draw() {
   background("Green");
   drawRoad();
+  drawCar();
 }
 
 function drawRoad(){
@@ -33,3 +34,14 @@ function drawRoad(){
   line(0, windowHeight/2, windowWidth, windowHeight/2);
 }
 
+class Cars {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+
+  }
+}
+
+function drawCar(){
+  rect(40, 40, 40 ,40);
+}
