@@ -1,9 +1,6 @@
-// Project Title
-// Your Name
-// Date
-//
-// Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// Cars Cars Cars! Assignment
+// Alaxandre Chalifour
+// 10/25/2024
 
 
 function setup() {
@@ -35,7 +32,7 @@ function drawRoad(){
 }
 
 class Cars {
-  constructor(x, y) {
+  constructor(x, y, type, color, direction, xSpeed) {
     this.x = x;
     this.y = y;
 
@@ -43,5 +40,6 @@ class Cars {
 }
 
 function drawCar(){
+  noStroke();
   rect(40, 40, 40 ,40);
 }
