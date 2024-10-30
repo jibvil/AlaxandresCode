@@ -17,6 +17,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   rectWidth = width / NUM_COLS;
   rectHeight = height / NUM_ROWS;
+  randomize();
 }
 
 function draw() {
@@ -58,6 +59,19 @@ function determineActiveSquare() {
   currentCol = int(mouseX / rectWidth);
 }
 
+function randomize(){
+  black = 0;
+  white = 1;
+  for (let x = 0; x < NUM_COLS; x++) {
+    for (let y = 0; y < NUM_ROWS; y++) {
+      gridData[y][x] = random(black, white);
+      if(i === 1){
+        set(white = 255);
+      }
+    }
+  }
+}
+
 function drawGrid() {
   // Render a grid of squares - fill color set according to data stored in the 2D array
   for (let x = 0; x < NUM_COLS; x++) {
@@ -67,5 +81,3 @@ function drawGrid() {
     }
   }
 }
-
-
