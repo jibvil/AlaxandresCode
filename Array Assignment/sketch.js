@@ -60,13 +60,12 @@ function determineActiveSquare() {
 }
 
 function randomize(){
-  black = 0;
-  white = 1;
+  //randomizes the starting color of every rectangle
   for (let x = 0; x < NUM_COLS; x++) {
     for (let y = 0; y < NUM_ROWS; y++) {
-      gridData[y][x] = random(black, white);
-      if(i === 1){
-        set(white = 255);
+      gridData[y][x] = random(0, 1);
+      if(gridData === 1){
+        gridData[y][x] = 255;
       }
     }
   }
