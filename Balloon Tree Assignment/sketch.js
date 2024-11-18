@@ -37,7 +37,7 @@ function drawTree(x1, y1, angle, depth) {
     
     drawLine(x1, y1, x2, y2, depth);
 
-    let sway = map(mouseX, 0, width, 15, 50);
+    let sway = map(mouseX, 0, width, 20, 40);
 
     //for a 3-branch tree:
     drawTree(x2, y2, angle-sway, depth-1);
@@ -48,15 +48,5 @@ function drawTree(x1, y1, angle, depth) {
     if (depth < 5){
       drawLeaf(x2, y2, random(scale*3-depth*5));
     }
-  }
-}
-
-function keyPressed(){
-  if(keyCode === 90){
-    depth -= 1;
-  }
-
-  else if(keyCode === 88){
-    depth += 1;
   }
 }
