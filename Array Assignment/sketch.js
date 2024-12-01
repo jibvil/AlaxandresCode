@@ -77,9 +77,9 @@ function drawGrid() {
 }
 
 function winCondition() {
-  for(gridData === [0])
+  if(gridData === gridData[0])
     text("You win!", width/2, height/2);
   
-  for(gridData === [255])
+  else if(gridData === gridData[255])
     text("You win!"); 
 }
