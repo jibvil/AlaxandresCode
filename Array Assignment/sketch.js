@@ -77,6 +77,7 @@ function drawGrid() {
 }
 
 function winCondition() {
+<<<<<<< HEAD
   // makes text appear based on if every square matches one color
   let score = 0;
   for (let x = 0; x < NUM_COLS; x++) {
@@ -99,4 +100,11 @@ function winCondition() {
     fill(0);
     text("You win!", width/2, height/2);
   }
+=======
+  if(gridData === gridData[0])
+    text("You win!", width/2, height/2);
+  
+  else if(gridData === gridData[255])
+    text("You win!"); 
+>>>>>>> 7c58dfa85ca0af64154ca64b01c34d969eccc45d
 }
