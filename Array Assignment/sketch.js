@@ -21,14 +21,14 @@ function setup() {
 function draw() {
   background(220);
   determineActiveSquare();   //figure out which tile the mouse cursor is over
-  drawGrid(); 
-  winCondition();               //render the current game board to the screen (and the overlay)
+  drawGrid();                //render the current game board to the screen (and the overlay)
+  winCondition();            //make win text appear
 }
 
 function mousePressed() {
   // cross-shaped pattern flips on a mouseclick. Boundary conditions are checked within the flip function to ensure in-bounds access for array
   if (keyIsPressed && keyCode === SHIFT) {
-    flip(currentCol, currentRow);
+    flip(currentCol, currentRow);  //cheating
   }
 
   else {
@@ -77,9 +77,26 @@ function drawGrid() {
 }
 
 function winCondition() {
-  for(gridData === [0])
+  // makes text appear based on if every square matches one color
+  let score = 0;
+  for (let x = 0; x < NUM_COLS; x++) {
+    for (let y = 0; y < NUM_ROWS; y++) {
+      if(gridData[y][x] === 255){
+        score++;
+      }
+      else{
+        score--;
+      }
+    }
+  }
+  if(score === -20){ //if all squares are white
+    textSize(20);
+    fill(255);
     text("You win!", width/2, height/2);
-  
-  for(gridData === [255])
-    text("You win!"); 
+  }
+  else if(score === 20){ //if all squares are black
+    textSize(20);
+    fill(0);
+    text("You win!", width/2, height/2);
+  }
 }
